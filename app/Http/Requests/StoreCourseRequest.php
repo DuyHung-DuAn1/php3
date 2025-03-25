@@ -22,7 +22,10 @@ class StoreCourseRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title'        => 'required',
+            'description' => 'nullable',
+            'introduction' => 'nullable',
+            'price'       => 'required',
         ];
     }
 }

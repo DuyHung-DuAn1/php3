@@ -4,14 +4,16 @@
 
 @section('content')
 <h2>Khóa học mới nhất</h2>
+<a href="{{ route('courses.create') }}" class="btn btn-info mt-3">Thêm Khóa Học</a>
 <div class="row">
+    
     @foreach($newCourses as $course)
         <div class="col-md-4 mb-4">
             <div class="card p-3">
                 <h3>{{ $course->title }}</h3>
                 <p>{{ $course->description }}</p>
                 <p><strong>Giá: </strong>${{ number_format($course->price, 2) }}</p>
-                <a href="{{ url('course/'.$course->id) }}" class="btn btn-primary">Xem chi tiết</a>
+                <a href="{{ url('courses/'.$course->id) }}" class="btn btn-primary">Xem chi tiết</a>
             </div>
         </div>
     @endforeach
@@ -25,7 +27,8 @@
                 <h3>{{ $course->title }}</h3>
                 <p>{{ $course->description }}</p>
                 <p><strong>Giá: </strong>${{ number_format($course->price, 2) }}</p>
-                <a href="{{ url('course/'.$course->id) }}" class="btn btn-primary">Xem chi tiết</a>
+                <a href="{{ url('courses/'.$course->id) }}" class="btn btn-primary">Xem chi tiết</a>
+                
             </div>
         </div>
     @endforeach

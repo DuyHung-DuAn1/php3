@@ -10,10 +10,7 @@ Route::get('/', [CourseController::class, 'index'])->name('home');
 
 
 
-
-Route::get('/course/{id}', [CourseController::class, 'show'])->name('course.show');
-
-
 Route::resource('products',ProductController::class);
 Route::resource('lessons',LessonController::class);
+Route::resource('courses',CourseController::class);
 
