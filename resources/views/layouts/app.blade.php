@@ -12,7 +12,7 @@
             <a class="navbar-brand" href="{{ url('/') }}">Khóa học</a>
         </div>
     </nav>
-
+ 
     <div class="container mt-4">
         @yield('content')
     </div>
